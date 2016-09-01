@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myText">
+        <p>{{x1}}</p>
+        <p>{{x2}}</p>
+        <p>{{x3}}</p>
+    </div>
+</body>
+<script>
+    var app=angular.module("myApp",[]);
+    app.controller("myText",function($scope){
+        $scope.x1="json";
+        $scope.x2=angular.lowercase($scope.x1);
+        $scope.x3=angular.uppercase($scope.x2);
+    })
+</script>
+</html>
